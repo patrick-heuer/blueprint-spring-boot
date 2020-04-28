@@ -1,0 +1,8 @@
+# Security enable/disable
+spring:
+  autoconfigure:
+    exclude: org.keycloak.adapters.springboot.KeycloakAutoConfiguration
+  profiles:
+    active: test
+keycloak:
+  enabled: false

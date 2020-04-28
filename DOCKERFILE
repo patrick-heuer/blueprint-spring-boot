@@ -1,0 +1,17 @@
+# 1. stage - built with gradle
+FROM gradle:6.3-jdk11 as build-layer
+
+EXPOSE 8080
+RUN mkdir /tmp-backend
+WORKDIR /tmp-backend
+COPY . .
+
+WORKDIR /tmp-backend
+RUN gradle bootJar --no-daemon
+RUN bash
+
+# 2. stage - runtime 
+FROM openjdk:11-jdk-slim as runtime-layer
+EXPOSE 8080
+COPY --from=build-layer /tmp-backend/build/libs/blueprint-1.0.0-SNAPSHOT.jar .
+CMD ["java", "-jar", "blueprint-1.0.0-SNAPSHOT.jar"]
