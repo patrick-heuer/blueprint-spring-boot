@@ -4,7 +4,6 @@ import name.pkrause.blueprint.entities.Cat;
 import name.pkrause.blueprint.entities.CatOwner;
 import name.pkrause.blueprint.entities.CatRepository;
 import name.pkrause.blueprint.usecases.shared.mapper.SourceTargetMapper;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

@@ -51,19 +51,19 @@ public class RESTCatOwnerController {
         this.updateCatOwnerUseCase = updateCatOwnerUseCase;
     }
 
-    @GetMapping(value = "/v1/owners", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/v1/owners", produces = MediaType.APPLICATION_JSON_VALUE)
     public GetCatOwnersResponse getCatOwners() {
         return getCatOwnersUseCase.execute(null);
     }
 
-    @GetMapping(value = "/v1/owners", params = {"offset", "limit"}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/v1/owners", params = {"offset", "limit"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public GetCatOwnersResponse getCatOwnersPage(
             @RequestParam(value = "offset", required = false, defaultValue = "0") int offset,
             @RequestParam(value = "limit", required = false, defaultValue = "10") int limit) {
         return getCatOwnersUseCase.execute(new GetCatOwnersRequest(offset, limit));
     }
 
-    @GetMapping(value = "/v1/owners/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/v1/owners/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GetCatOwnerResponse> getCatOwner(@PathVariable(value = "id", required = true) Long id) {
         final GetCatOwnerResponse response = getCatOwnerUseCase.execute(new GetCatOwnerRequest(id));
 
@@ -74,13 +74,13 @@ public class RESTCatOwnerController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping(value = "/v1/owners", params = {"name"}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/v1/owners", params = {"name"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public GetCatOwnersByNameResponse getCatOwnersByName(
             @RequestParam(value = "name", required = true) String name) {
         return getCatOwnersByNameUseCase.execute(new GetCatOwnersByNameRequest(name));
     }
 
-    @PostMapping(value = "/v1/owners", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(value = "/v1/owners", produces = MediaType.APPLICATION_JSON_VALUE)
     public CreateCatOwnerResponse createCatOwner(@Valid @RequestBody CreateCatOwnerRequest request) {
         CreateCatOwnerResponse response = createCatOwnerUseCase.execute(request);
         return response;

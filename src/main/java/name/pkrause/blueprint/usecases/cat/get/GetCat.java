@@ -1,6 +1,5 @@
 package name.pkrause.blueprint.usecases.cat.get;
 
-import name.pkrause.blueprint.entities.Cat;
 import name.pkrause.blueprint.entities.CatRepository;
 import name.pkrause.blueprint.usecases.shared.mapper.SourceTargetMapper;
 import org.springframework.stereotype.Service;

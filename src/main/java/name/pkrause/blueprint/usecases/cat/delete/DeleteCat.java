@@ -1,7 +1,6 @@
 package name.pkrause.blueprint.usecases.cat.delete;
 
 import name.pkrause.blueprint.entities.CatRepository;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

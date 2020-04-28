@@ -15,7 +15,7 @@ buildscript {
 }
 
 plugins {
-    id 'net.ltgt.apt' version '0.20'
+    id 'net.ltgt.apt' version '0.20' // Gradle plugin making it easier/safer to use Java annotation processors
 }
 
 apply plugin: 'java'

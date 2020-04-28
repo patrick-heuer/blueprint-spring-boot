@@ -241,6 +241,6 @@ class RESTCatControllerITest {
         // Then
         resultActions
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE));
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE));
     }
 }

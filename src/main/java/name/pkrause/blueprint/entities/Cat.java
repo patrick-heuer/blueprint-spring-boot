@@ -3,7 +3,6 @@ package name.pkrause.blueprint.entities;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
-// import org.apache.commons.lang3.StringUtils;
 
 import javax.persistence.*;
 import java.util.Objects;

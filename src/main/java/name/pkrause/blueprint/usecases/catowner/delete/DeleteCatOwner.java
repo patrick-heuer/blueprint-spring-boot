@@ -1,7 +1,6 @@
 package name.pkrause.blueprint.usecases.catowner.delete;
 
 import name.pkrause.blueprint.entities.CatOwnerRepository;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

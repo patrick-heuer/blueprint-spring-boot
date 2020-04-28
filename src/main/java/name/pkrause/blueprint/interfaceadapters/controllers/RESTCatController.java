@@ -18,7 +18,6 @@ import name.pkrause.blueprint.usecases.cat.update.UpdateCatResponse;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
 
@@ -48,19 +47,19 @@ public class RESTCatController {
         this.getCatsUseCase = getCatsUseCase;
     }
 
-    @GetMapping(value = "/v1/cats", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/v1/cats", produces = MediaType.APPLICATION_JSON_VALUE)
     public GetCatsResponse getCats() {
         return getCatsUseCase.execute(null);
     }
 
-    @GetMapping(value = "/v1/cats", params = {"offset", "limit"}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/v1/cats", params = {"offset", "limit"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public GetCatsResponse getCatsPage(
             @RequestParam(value = "offset", required = false, defaultValue = "0") int offset,
             @RequestParam(value = "limit", required = false, defaultValue = "10") int limit) {
         return getCatsUseCase.execute(new GetCatsRequest(offset, limit));
     }
 
-    @GetMapping(value = "/v1/cats/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/v1/cats/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GetCatResponse> getCat(@PathVariable(value = "id", required = true) Long id) {
         final GetCatResponse response = getCatUseCase.execute(new GetCatRequest(id));
 
@@ -71,7 +70,7 @@ public class RESTCatController {
         return ResponseEntity.ok(response);
     }
 
-    @PostMapping(value = "/v1/cats", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(value = "/v1/cats", produces = MediaType.APPLICATION_JSON_VALUE)
     public CreateCatResponse createCat(@Valid @RequestBody CreateCatRequest request) {
         CreateCatResponse response = createCatUseCase.execute(request);
         return response;
