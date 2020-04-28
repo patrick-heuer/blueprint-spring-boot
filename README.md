@@ -7,8 +7,16 @@
 > Blueprint microsoervice with cats and their cat-owner as bounded context, using Spring Boot, H2 in-memory database<br>
 > Mapper, Swagger / OpenAPI and OpenID Connect Security (via Keycloak)<br>
 
-## LEARN
-Clean Architecture
+## Clean Architecture
+Clean Architecture push us to separate stable business rules (higher-level abstractions) from volatile technical details (lower-level details), defining clear boundaries. The main building block is the Dependency Rule : source code dependencies must point only inward, toward higher-level policies.
+
+It should have the following characteristics:
+
+Testable
+Independent of frameworks
+Independent of the UI
+Independent of the database
+Independent of any external agency
 
 ![Logo](https://github.com/PKrause79/blueprint-spring-boot/blob/master/CleanArchitecture.jpg)
 
