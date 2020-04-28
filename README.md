@@ -22,8 +22,7 @@ It should have the following characteristics:
 
 ## RUN
 
-
-Create JAR & local run
+Compile and run:
 ```
 gradlew bootRun
 ```
