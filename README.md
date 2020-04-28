@@ -1,4 +1,4 @@
-![Logo](https://github.com/PKrause79/blueprint-spring-boot-azure/blob/master/cat-blueprint-logo.png)
+![Logo](https://github.com/PKrause79/blueprint-spring-boot/blob/master/cat-blueprint-logo.png)
 
 # Microservice Blueprint - Spring Boot
 >
@@ -10,7 +10,7 @@
 ## LEARN
 Clean Architecture
 
-![Logo](https://github.com/PKrause79/blueprint-spring-boot-azure/blob/master/CleanArchitecture.jpg)
+![Logo](https://github.com/PKrause79/blueprint-spring-boot/blob/master/CleanArchitecture.jpg)
 
 ## RUN
 
@@ -20,12 +20,12 @@ Create JAR & local run
 gradlew bootRun
 ```
 
-URL´s 
-```
+## URL´s 
+
 Cats: http://localhost:8080/api/v1/cats
 Health: http://localhost:8080/actuator
 Swagger: http://localhost:8080/swagger-ui.html
-```
+
 
 ## TODO´s
 * Flyway migrations
