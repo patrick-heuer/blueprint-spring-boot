@@ -12,11 +12,11 @@ Clean Architecture push us to separate stable business rules (higher-level abstr
 
 It should have the following characteristics:
 
-Testable
-Independent of frameworks
-Independent of the UI
-Independent of the database
-Independent of any external agency
+* Testable
+* Independent of frameworks
+* Independent of the UI
+* Independent of the database
+* Independent of any external agency
 
 ![Logo](https://github.com/PKrause79/blueprint-spring-boot/blob/master/CleanArchitecture.jpg)
 
