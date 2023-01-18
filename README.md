@@ -2,7 +2,7 @@
 
 # Microservice Blueprint - Spring Boot
 >
-> (c) 2020 Patrick Krause
+> (c) 2020 Patrick Heuer (formerly Krause)
 >
 > Blueprint microsoervice with cats and their cat-owner as bounded context, using Spring Boot, H2 in-memory database<br>
 > Mapper, Swagger / OpenAPI and OpenID Connect Security (via Keycloak)<br>
